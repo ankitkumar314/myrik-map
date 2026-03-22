@@ -51,7 +51,7 @@ const AddReviews = ({ locations = [], onAddReview, mapboxToken }) => {
 
   const getPlaceName = async (lat, lng) => {
     try {
-      const accessToken = mapboxToken || "pk.eyJ1IjoiYW5raXRrdW1hcjMtMTQiLCJhIjoiY21uMTZoNTZvMHIwdDMyczJpaXN4eTc0ciJ9.O8D49x-_OEgn1Sddj7t38A";
+      const accessToken = mapboxToken;
 
       const response = await fetch(
         `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${accessToken}`
