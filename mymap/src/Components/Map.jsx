@@ -15,7 +15,7 @@ const MapComponent = () => {
   const mapRef = useRef(null);
   const [screenPoints, setScreenPoints] = useState([]);
   const [locations, setLocations] = useState(initialLocations);
-  const mapboxToken = 'pk.eyJ1IjoiYW5raXRrdW1hcjMtMTQiLCJhIjoiY21uMTZoNTZvMHIwdDMyczJpaXN4eTc0ciJ9.O8D49x-_OEgn1Sddj7t38A';
+  const mapboxToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
   useEffect(() => {
     try {
